@@ -13,7 +13,7 @@ public class NombresUtils {
         profesores.forEach(System.out::println);
         
     }
-    static <T> List<T> getList(T... elemets ){
+    public static <T> List<T> getList(T... elemets ){
         return Arrays.asList(elemets);
     }
 }
