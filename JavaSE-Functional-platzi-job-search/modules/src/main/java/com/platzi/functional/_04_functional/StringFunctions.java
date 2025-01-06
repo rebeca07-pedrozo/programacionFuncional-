@@ -1,7 +1,6 @@
 package com.platzi.functional._04_functional;
 
 import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
@@ -11,7 +10,9 @@ public class StringFunctions {
         UnaryOperator<String> addMark = text -> text + "!";
         System.out.println(quote.apply("Corrobar resultado"));
         System.out.println(addMark.apply("Hello"));
-        BinaryOperator<Integer> multiplicacion = (x, y) -> x*y;
-        System.out.println(multiplicacion.apply(5,4));
+
+        BiFunction< String, Integer, String> leftPad =
+                (text, number) -> String.format ("%" + number + "s", text);
+        System.out.println(leftPad.apply("Java", 10));
     }
 }
