@@ -9,8 +9,9 @@ public class Chaining {
                     .append("no more")
                     .append("(music playing)");
             Chainer chainer = new Chainer ();
-            chainer.sayHi();
-            chainer.sayHi();
+            Chainer chainer2=chainer.sayHi();
+            Chainer chainer3=chainer2.sayBye();
+            chainer.sayHi().sayBye();
         
     }
     static class Chainer {
