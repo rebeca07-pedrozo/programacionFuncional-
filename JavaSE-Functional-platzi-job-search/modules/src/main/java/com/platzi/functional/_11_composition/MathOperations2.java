@@ -14,8 +14,15 @@ public class MathOperations2 {
                     System.out.println("Agrege 1 a: "+y);
                     return y+1;
                 });
+        Function< Integer, Integer> andSquare=
+                addMultiplyBy3.andThen(x -> {
+                    System.out.println("Estoy elevando el numero: "+x+"al cuadrado");
+                    return x*x;
+                });
+
         System.out.println(
                 addMultiplyBy3.apply(5)
         );
+        System.out.println(andSquare.apply(3));
     }
 }
